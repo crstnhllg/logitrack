@@ -29,29 +29,19 @@ git clone https://github.com/crstnhllg/logitrack.git
 cd logitrack
 ````
 
-2. Create a virtual environment and install dependencies:
+2. Set and copy env vars:
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-.venv\Scripts\activate     # Windows
-pip install -r requirements.txt
-```
+Modify .env.example to include necessary env vars
 
-3. Set environment variables for database and JWT secrets (example):
+`cp .env.example .env`
 
-```bash
-export DATABASE_URL="sqlite:///./logitrack.db"
-export SECRET_KEY="your_secret_key"
-```
+3. Run docker compose
 
-4. Start the server:
+Run `docker compose build` and `docker compose up -d`
 
-```bash
-uvicorn app.main:app --reload
-```
+The server will be available on http://localhost:8000
 
-API docs will be available at: `http://127.0.0.1:8000/docs`
+API Docs on http://localhost:8000/docs
 
 ## License
 

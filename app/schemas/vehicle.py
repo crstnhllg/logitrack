@@ -4,15 +4,23 @@ from datetime import datetime
 
 
 class VehicleRequest(BaseModel):
-    license_plate: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(examples=['abc123'])
-    vehicle_type: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(examples=['van'])
-    capacity_kg: int = Field(gt=0, examples=['15'])
-    vehicle_status: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(examples=['available'])
-    driver_id: int = Field(gt=0, examples=['1'])
+    license_plate: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(
+        examples=["abc123"]
+    )
+    vehicle_type: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(
+        examples=["van"]
+    )
+    capacity_kg: int = Field(gt=0, examples=["15"])
+    vehicle_status: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(
+        examples=["available"]
+    )
+    driver_id: int = Field(gt=0, examples=["1"])
 
 
 class VehicleStatusRequest(BaseModel):
-    vehicle_status: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(examples=['available'])
+    vehicle_status: constr(min_length=3, max_length=15, strip_whitespace=True) = Field(
+        examples=["available"]
+    )
 
 
 class VehicleDriverRequest(BaseModel):
